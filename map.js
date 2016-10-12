@@ -6,7 +6,6 @@ $(document).ready(function() {
   });
 });
 
-
 // In the following example, markers appear when the user clicks on the map.
 // Each marker is labeled with a single alphabetical character.
 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -30,14 +29,19 @@ function initialize(z,vlat,vlng) {
 // Adding bikes object
 $.get('https://bikeindex.org:443/api/v2/bikes_search/stolen?page=1&proximity=45.521728%2C-122.67326&proximity_square=200', function(response){
     //addMarker(bikes[0].stolen_location, map);
-    for(var i=0; i<25; i++) {
-      console.log(response.bikes[i].stolen_location);
-      console.log(response.bikes[i].thumb);
-      console.log(response.bikes[i].thumb);
-    }
+    // var address;
+    // var geocoder = new google.maps.Geocoder();
+    // for(var i=0; i<25; i++) {
+    //   address=response.bikes[i].stolen_location;
+    //   geocoder.geocode({'address': address}, function(results, status) {
+    //     if (status === 'OK') {
+    //       addMarker(results[0].geometry.location, map);
+    //     } else {
+    //       alert('Geocode was not successful for the following reason: ' + status);
+    //     }
+    //  });
+    // }
 });
-
-
 
 // Adds a marker to the map.
 function addMarker(location, map) {
@@ -50,10 +54,4 @@ function addMarker(location, map) {
   });
 }
 
-// $("#zoom").on('change', function() {
-//   alert("change!");
-// });
-
-
-
-// google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', initialize);
