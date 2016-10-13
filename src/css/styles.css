@@ -43,8 +43,9 @@ p {
 
 img {
   display: block;
-  margin: auto; }
-
+  margin: auto;
+  height: 300px;
+  }
 #map {
   height: 90%; }
 
