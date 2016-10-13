@@ -19,7 +19,7 @@ html, body {
   margin: 0;
   padding: 0;
   background: $color3;
-  color: $color1;
+
 }
 h1 {
   text-align:center;
@@ -30,9 +30,11 @@ h1 {
   line-height: 3;
   padding-top: 25px;
   margin-top: 0;
+  color: $color1;
 }
 h2 {
   background: $color5;
+  color: $color1;
   font-family: 'Cinzel', serif;
   padding: 18px;
   border-radius: 8px;
@@ -42,8 +44,17 @@ a, a:hover, a:active, a:visited {
   color: $color1;
   text-decoration: none;
 }
-a:hover h2 {
+h2 button {
+  color: $color2;
+  margin-top: 6px;
+}
+
+button:hover, a:hover h2 {
   background: $color4;
+}
+p {
+  font-size: 1.5em;
+  text-align: center;
 }
 img {
   display: block;

@@ -13,35 +13,38 @@
   </head>
   <body>
     <div class="container">
-      <form id="mapform">
-        <div class="row">
-          <div class="form-group col-xs-4">
-            <label for="lat">Latitude: </label>
-            <input type="number" id="lat" class="form-control" value=45.5207>
+      <h2>
+        <form id="mapform">
+          <div class="row">
+            <div class="form-group col-xs-4">
+              <label for="lat">Latitude: </label>
+              <input type="number" id="lat" class="form-control" value=45.5207>
+            </div>
+            <div class="form-group col-xs-4">
+              <label for="lng">Longitude: </label>
+              <input type="number" id="lng" class="form-control" value=-122.6774>
+            </div>
+            <div class="form-group col-xs-2">
+              <label for="zoom">Zoom: </label>
+              <select id="zoom" class="form-control">
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18" selected>18</option>
+              </select>
+            </div>
+            <div class="form-group col-xs-2">
+              <br>
+              <button class="btn form-control" id="formbtn">GO</button>
+            </div>
           </div>
-          <div class="form-group col-xs-4">
-            <label for="lng">Longitude: </label>
-            <input type="number" id="lng" class="form-control" value=-122.6774>
-          </div>
-          <div class="form-group col-xs-2">
-            <label for="zoom">Zoom: </label>
-            <select id="zoom" class="form-control">
-              <option value="4">4</option>
-              <option value="6">6</option>
-              <option value="8">8</option>
-              <option value="10">10</option>
-              <option value="12">12</option>
-              <option value="14">14</option>
-              <option value="16">16</option>
-              <option value="18" selected>18</option>
-            </select>
-          </div>
-          <div class="form-group col-xs-2">
-            <br>
-            <button class="btn btn-primary" id="formbtn">GO</button>
-          </div>
-        </div>
-      </form>
+        </form>
+      </h2>
+      <p>This is a game. Pick a place you would like to go and guess the latitude and longitude. <br>See how many guesses it takes to get to your destination.</p>
     </div>
 
     <div id="map"></div>
