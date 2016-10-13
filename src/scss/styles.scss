@@ -1,0 +1,55 @@
+/* Coolors Exported Palette - coolors.co/bdc696-594236-d1d3c4-70566d-384d48 */
+
+/* HSL */
+$color1: hsla(71%, 30%, 68%, 1);
+$color2: hsla(21%, 24%, 28%, 1);
+$color3: hsla(68%, 15%, 80%, 1);
+$color4: hsla(307%, 13%, 39%, 1);
+$color5: hsla(166%, 16%, 26%, 1);
+
+/* RGB */
+$color1: rgba(189, 198, 150, 1);
+$color2: rgba(89, 66, 54, 1);
+$color3: rgba(209, 211, 196, 1);
+$color4: rgba(112, 86, 109, 1);
+$color5: rgba(56, 77, 72, 1);
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: $color3;
+  color: $color1;
+}
+h1 {
+  text-align:center;
+  font-family: 'Cinzel', serif;
+  background: $color2;
+  color: white;
+  font-size: 4em;
+  line-height: 3;
+  padding-top: 25px;
+  margin-top: 0;
+}
+h2 {
+  background: $color5;
+  font-family: 'Cinzel', serif;
+  padding: 18px;
+  border-radius: 8px;
+  text-align: center;
+}
+a, a:hover, a:active, a:visited {
+  color: $color1;
+  text-decoration: none;
+}
+a:hover h2 {
+  background: $color4;
+}
+img {
+  display: block;
+  margin: auto;
+
+}
+#map {
+  height: 90%;
+}

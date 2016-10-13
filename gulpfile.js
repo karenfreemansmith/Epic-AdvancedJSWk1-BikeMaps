@@ -29,7 +29,7 @@ gulp.task('deploy', function() {
     .pipe(pages());
 });
 
-gulp.task('serve', function() {
+gulp.task('serve', ['build'],function() {
   sync.init({
     server: {
       baseDir: "./dist/",
@@ -41,13 +41,18 @@ gulp.task('serve', function() {
   gulp.watch(['src/*.html'],['htmlBuild']);
   gulp.watch(['src/css/*.css'],['cssBuild']);
   gulp.watch(['src/scss/*.scss'],['scssBuild']);
+  gulp.watch(['src/img/*.*'],['mediaBuild']);
 });
 
 gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function() {
   sync.reload();
 });
 
-gulp.task('bowerBuid', ['bower'], function() {
+gulp.task('mediaBuild', ['staticMedia'], function() {
+  sync.reload();
+});
+
+gulp.task('bowerBuild', ['bower'], function() {
   sync.reload();
 });
 
@@ -66,6 +71,11 @@ gulp.task('scssBuild', ['sassCSS'], function() {
 gulp.task('staticHTML', function() {
   return gulp.src('./src/*.html')
     .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('staticMedia', function() {
+  return gulp.src('./src/img/*.*')
+    .pipe(gulp.dest('./dist/img'));
 });
 
 gulp.task('staticCSS', function() {

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Marker Labels</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAP7GPEqdCZoW96Ib_4lxeOsp8kPBsuCcw"></script>
+    <script src="js/map.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="mapform">
+        <div class="row">
+          <div class="form-group col-xs-4">
+            <label for="lat">Latitude: </label>
+            <input type="number" id="lat" class="form-control" value=45.5207>
+          </div>
+          <div class="form-group col-xs-4">
+            <label for="lng">Longitude: </label>
+            <input type="number" id="lng" class="form-control" value=-122.6774>
+          </div>
+          <div class="form-group col-xs-2">
+            <label for="zoom">Zoom: </label>
+            <select id="zoom" class="form-control">
+              <option value="4">4</option>
+              <option value="6">6</option>
+              <option value="8">8</option>
+              <option value="10">10</option>
+              <option value="12">12</option>
+              <option value="14">14</option>
+              <option value="16">16</option>
+              <option value="18" selected>18</option>
+            </select>
+          </div>
+          <div class="form-group col-xs-2">
+            <br>
+            <button class="btn btn-primary" id="formbtn">GO</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div id="map"></div>
+
+  </body>
+</html>
