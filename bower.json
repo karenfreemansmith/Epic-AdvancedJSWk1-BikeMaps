@@ -1,0 +1,25 @@
+{
+  "name": "gulp-deploy",
+  "description": "a simple project to test gulp features",
+  "main": "index.html",
+  "authors": [
+    "Karen Freeman-Smith"
+  ],
+  "license": "GPL-3.0",
+  "keywords": [
+    "gulp",
+    "npm"
+  ],
+  "homepage": "https://github.com/karenfreemansmith/gulp-deploy",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "moment": "^2.13.0"
+  }
+}
